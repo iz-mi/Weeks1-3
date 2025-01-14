@@ -7,6 +7,7 @@ public class bouncyBall : MonoBehaviour
 {
     float ballSpeedx = 0.1f;
     float ballSpeedy = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,19 @@ public class bouncyBall : MonoBehaviour
         }
 
         transform.position = pos;
+
+        //Up/down change ball size
+
+        //L/R change ball speed
         
+        Input.GetAxis("Horizontal");
+
+        //spacebar reset ball to 0,0
+       if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.position = new Vector2(0, 0);
+            ballSpeedx = Random.Range(0.1f, 1f);
+            ballSpeedy = Random.Range(0.1f, 1f);
+        }
     }
 }

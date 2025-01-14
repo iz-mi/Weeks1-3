@@ -5,7 +5,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public float initialSpeed = 5;
-    public float ballSpeed = 5;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class NewBehaviourScript : MonoBehaviour
         // L/R to change speed of ball
         Vector2 pos = transform.position;
 
-        ballSpeed = Input.GetAxisRaw("Horizontal") * initialSpeed * Time.deltaTime;
+       
 
 
         // space to reset ball position
