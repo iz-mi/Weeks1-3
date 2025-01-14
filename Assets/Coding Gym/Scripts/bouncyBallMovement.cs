@@ -23,8 +23,9 @@ public class bouncyBall : MonoBehaviour
         pos.y += ballSpeedy;
 
         Vector2 screenPos = Camera.main.WorldToScreenPoint(pos);
-
-        if(screenPos.x < 0 || screenPos.x > Screen.width)
+        
+        //screen border collision detection
+        if (screenPos.x < 0 || screenPos.x > Screen.width)
         {
             ballSpeedx = ballSpeedx * -1;
         }
@@ -35,8 +36,6 @@ public class bouncyBall : MonoBehaviour
         }
 
         transform.position = pos;
-
-        //screen border collision detection
-
+        
     }
 }
