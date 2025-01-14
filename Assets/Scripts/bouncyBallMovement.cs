@@ -39,13 +39,30 @@ public class bouncyBall : MonoBehaviour
         transform.position = pos;
 
         //Up/down change ball size
+        //transform.localScale = Vector2.one * (Input.GetAxis("Vertical"));
 
         //L/R change ball speed
-        
-        Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            ballSpeedx = ballSpeedx - 0.05f;
+            ballSpeedy = ballSpeedy - 0.05f;
+            if (ballSpeedx<0)
+            {
+                ballSpeedx = 0f;
+            }
+            if (ballSpeedy < 0)
+            {
+                ballSpeedy = 0f;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ballSpeedx += 0.1f;
+            ballSpeedy += 0.1f;
+        }
 
         //spacebar reset ball to 0,0
-       if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.position = new Vector2(0, 0);
             ballSpeedx = Random.Range(0.1f, 1f);
