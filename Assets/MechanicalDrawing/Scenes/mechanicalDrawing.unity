@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 528654367}
   - component: {fileID: 528654366}
   m_Layer: 0
-  m_Name: pedalBG
+  m_Name: pedalEngineBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,7 +411,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  m_Color: {r: 0.5566038, g: 0.46986938, b: 0.35444108, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -696,7 +696,7 @@ Transform:
   m_GameObject: {fileID: 1588338440}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.95, y: 0.95, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -713,6 +713,7 @@ GameObject:
   - component: {fileID: 1638322833}
   - component: {fileID: 1638322832}
   - component: {fileID: 1638322834}
+  - component: {fileID: 1638322835}
   m_Layer: 0
   m_Name: gasPedal
   m_TagString: Untagged
@@ -781,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 1638322831}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.37, y: -1.72, z: 0}
+  m_LocalPosition: {x: 7.37, y: -1.65, z: 1}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -801,6 +802,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backWheel: {fileID: 722152186}
   frontWheel: {fileID: 130428526}
+--- !u!114 &1638322835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638322831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88841a7b0e32831419fe4cd49430613c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedalT: 0
+  pedalCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: -0.0063273767
+      outSlope: -0.0063273767
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1359979
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startpoint: {x: 7.37, y: -1.35}
+  endpoint: {x: 7.37, y: -1.65}
 --- !u!1 &1751126073
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +861,7 @@ GameObject:
   - component: {fileID: 1751126075}
   - component: {fileID: 1751126074}
   - component: {fileID: 1751126076}
+  - component: {fileID: 1751126077}
   m_Layer: 0
   m_Name: brakePedal
   m_TagString: Untagged
@@ -880,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1751126073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.32, y: -0.92, z: 0.061442547}
+  m_LocalPosition: {x: 5.32, y: -0.75, z: 1}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -907,6 +957,54 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   brakeT: 0
+--- !u!114 &1751126077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751126073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88841a7b0e32831419fe4cd49430613c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedalT: 0
+  pedalCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14517999
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startpoint: {x: 5.32, y: -0.5}
+  endpoint: {x: 5.32, y: -0.8}
 --- !u!1 &1778543341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1156,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4339623, g: 0.40159097, b: 0.37459952, a: 1}
+  m_Color: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1142,7 +1240,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.73700607, g: 0.91790986, b: 0.9245283, a: 1}
+  m_Color: {r: 0.6084906, g: 0.983687, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1178,7 +1276,7 @@ SceneRoots:
   - {fileID: 130428528}
   - {fileID: 1638322833}
   - {fileID: 1751126075}
-  - {fileID: 2018584703}
-  - {fileID: 2080810517}
-  - {fileID: 528654367}
   - {fileID: 97244605}
+  - {fileID: 528654367}
+  - {fileID: 2080810517}
+  - {fileID: 2018584703}

@@ -24,6 +24,5 @@ public class gasPedal : MonoBehaviour
             backWheel.wheelRot += 1.0f;
             frontWheel.wheelRot += 1.0f;
         }
-
     }
 }
