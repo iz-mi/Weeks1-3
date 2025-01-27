@@ -7,10 +7,7 @@ public class gasPedal : MonoBehaviour
     //create the property of 'wheel' so that rotation can be modified
     public wheelController backWheel;
     public wheelController frontWheel;
-
-    //create an animation curve that affects the gas Pedal control
-    public AnimationCurve gasPedalScale;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +17,13 @@ public class gasPedal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //click the G key to increase car speed (wheelRot)
+        //Keyboard G key interaction
         if (Input.GetKeyDown(KeyCode.G))
         {
+            //click G to increase car speed (wheelRot)
             backWheel.wheelRot += 1.0f;
             frontWheel.wheelRot += 1.0f;
         }
+
     }
 }

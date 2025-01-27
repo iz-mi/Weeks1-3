@@ -9,7 +9,8 @@ public class brakePedal : MonoBehaviour
     public wheelController frontWheel;
 
     //create an animation curve that affects the gas Pedal control
-    public AnimationCurve brakePedalScale;
+    public AnimationCurve brakePedalCurve;
+    public float brakeT;
 
     // Start is called before the first frame update
     void Start()
