@@ -814,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88841a7b0e32831419fe4cd49430613c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotSpeed: {fileID: 722152186}
   pedalT: 0
   pedalCurve:
     serializedVersion: 2
@@ -969,6 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88841a7b0e32831419fe4cd49430613c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotSpeed: {fileID: 722152186}
   pedalT: 0
   pedalCurve:
     serializedVersion: 2
